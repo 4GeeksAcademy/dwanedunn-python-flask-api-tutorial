@@ -1,6 +1,10 @@
 from flask import Flask
 app = Flask(__name__)
+# Leave above lines in tack
 
+@app.route('/myroute', methods=['GET'])
+def hello_world():
+    return 'Hello World!'
 
 
 # These two lines should always be at the end of your app.py file
