@@ -6,10 +6,14 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World!'
 
-
 @app.route('/todos', methods=['GET'])
-def hello():
-    return "<h1>Hello!</h1>"
+def hello_todo():
+    return '<h1>Hello!</h1>'
+
+
+# @app.route('/todos', methods=['GET'])
+# def hello():
+#     return "<h1>Hello!</h1>"
 
 # These two lines should always be at the end of your app.py file
 if __name__ == '__main__':
