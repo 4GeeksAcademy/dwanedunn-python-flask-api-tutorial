@@ -6,9 +6,9 @@ app = Flask(__name__)
 #Global Variables
 todos = [ { "label": "My first task", "done": False } ]
 
-@app.route('/myroute', methods=['GET'])
-def hello_world():
-    return 'Hello World!'
+# @app.route('/myroute', methods=['GET'])
+# def hello_world():
+#     return 'Hello World!'
 
 @app.route('/todos', methods=['GET'])
 def hello_world():
