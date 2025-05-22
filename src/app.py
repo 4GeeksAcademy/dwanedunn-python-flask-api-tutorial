@@ -1,6 +1,12 @@
-from flask import Flask
+from flask import Flask, jsonify
 app = Flask(__name__)
-# Leave above lines in tack
+# Leave above lines in tact
+
+#Global Variables
+todos = [
+    { "label": "My first task", "done": False },
+    { "label": "My second task", "done": False }
+]
 
 @app.route('/myroute', methods=['GET'])
 def hello_world():
@@ -8,7 +14,8 @@ def hello_world():
 
 @app.route('/todos', methods=['GET'])
 def hello_todo():
-    return '<h1>Hello!</h1>'
+    # json_data = jsonify(todos)
+    return jsonify(todos)
 
 
 # @app.route('/todos', methods=['GET'])
